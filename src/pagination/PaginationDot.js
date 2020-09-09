@@ -143,13 +143,16 @@ export default class PaginationDot extends PureComponent {
 
         return (
             <TouchableOpacity
-              accessible={false}
+              accessible={true}
+              accessibilityLabel="Punto dello slider"
               style={dotContainerStyle}
               activeOpacity={tappable ? activeOpacity : 1}
               onPress={onPress}
               delayPressIn={delayPressInDot}
             >
-                <Animated.View style={dotStyle} />
+                <Animated.View accessible={true}
+                               accessibilityLabel="Punto dello slider"
+                               style={dotStyle} />
             </TouchableOpacity>
         );
     }
